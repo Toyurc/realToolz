@@ -81,5 +81,3 @@ module.exports = {
   },
 };
 
-
-// function to format date
