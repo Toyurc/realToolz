@@ -54,12 +54,6 @@ module.exports = {
         when: 'multiline',
       },
     ],
-    'react/jsx-newline': [
-      'error',
-      {
-        prevent: false,
-      },
-    ],
     'react/jsx-sort-props': [
       'off',
       {
