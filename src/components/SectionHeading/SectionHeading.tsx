@@ -1,15 +1,27 @@
+import { Colors } from 'components/Buttons/Button';
 import React from 'react';
+import {
+  SectionHeader,
+  SectionHeadingText,
+  SectionDescription,
+} from './SectionHeading.styles';
 
-type SectionHeadingProps = {
+export type SectionHeadingProps = {
   header: string;
   description: string;
+  descriptionColor?: Colors;
+  headerColor?: string;
 };
-const SectionHeading = ({ header, description }: SectionHeadingProps) => {
+const SectionHeading = (props: SectionHeadingProps) => {
   return (
-    <header>
-      <h3>{header}</h3>
-      <p>{description}</p>
-    </header>
+    <SectionHeader>
+      <SectionHeadingText headerColor={props.headerColor}>
+        {props.header}
+      </SectionHeadingText>
+      <SectionDescription descriptionColor={props.descriptionColor}>
+        {props.description}
+      </SectionDescription>
+    </SectionHeader>
   );
 };
 

@@ -1,6 +1,6 @@
 import { BaseButton } from './Buttons.styles';
 
-export enum ButtonColors {
+export enum Colors {
   white = '#FFFFFF',
   black = '#000103',
   yellow = '#FFCE31',
@@ -8,8 +8,8 @@ export enum ButtonColors {
 }
 
 export type ButtonProps = {
-  color: ButtonColors;
-  background: ButtonColors;
+  color: Colors;
+  background: Colors;
   children: React.ReactNode;
   padding?: string;
 };

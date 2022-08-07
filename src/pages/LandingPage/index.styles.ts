@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import BannerImage from '../../assets/images/landing-page-banner.png';
+import ActiveListingImage from '../../assets/images/active-listing.png';
 
 export const Banner = styled.section`
   background-image: url(${BannerImage});
@@ -92,4 +93,11 @@ export const ButtonContainer = styled.div`
 export const FeaturedStorage = styled.section`
   display: flex;
   background-color: #f5f5f5;
+`;
+
+export const ActiveListing = styled.section`
+  background-image: url(${ActiveListingImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `;

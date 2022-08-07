@@ -2,6 +2,7 @@ import { Wrapper } from 'components/Wrapper/index.styles';
 import { Link } from 'react-router-dom';
 import { ReactComponent as ContainerLogo } from 'assets/icons/container.svg';
 import {
+  ActiveListing,
   Banner,
   ButtonContainer,
   FeaturedStorage,
@@ -14,7 +15,7 @@ import {
   Paragraph,
   TextContainer,
 } from './index.styles';
-import Button, { ButtonColors } from 'components/Buttons/Button';
+import Button, { Colors } from 'components/Buttons/Button';
 import SectionHeading from 'components/SectionHeading/SectionHeading';
 
 type RouterLinkProps = {
@@ -70,8 +71,8 @@ const LandingPage = () => {
               </NavLinksContainer>
               <Button
                 padding="0.8rem 1.8rem"
-                color={ButtonColors.black}
-                background={ButtonColors.yellow}
+                color={Colors.black}
+                background={Colors.yellow}
               >
                 contact
               </Button>
@@ -84,10 +85,10 @@ const LandingPage = () => {
               aliquam non tortor blandit lobortis. blandit
             </Paragraph>
             <ButtonContainer>
-              <Button color={ButtonColors.black} background={ButtonColors.yellow}>
+              <Button color={Colors.black} background={Colors.yellow}>
                 Sell Your Self Storage
               </Button>
-              <Button color={ButtonColors.black} background={ButtonColors.white}>
+              <Button color={Colors.black} background={Colors.white}>
                 Active Self Storage Listings
               </Button>
             </ButtonContainer>
@@ -104,6 +105,16 @@ const LandingPage = () => {
           />
         </Wrapper>
       </FeaturedStorage>
+      <ActiveListing>
+        <SectionHeading
+          header={'active Listing Self Storages'}
+          description={
+            'lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tortor sapien sagittis maecenas tincidunt. Quis pretium ornare'
+          }
+          headerColor={Colors.white}
+          descriptionColor={Colors.white}
+        />
+      </ActiveListing>
     </>
   );
 };
