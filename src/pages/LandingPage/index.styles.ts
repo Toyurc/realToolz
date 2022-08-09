@@ -13,7 +13,7 @@ export const Banner = styled.section`
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 610px;
+  height: 61rem;
 `;
 
 export const NavLinks = styled.nav`
@@ -32,7 +32,7 @@ export const LogoContainer = styled(Link)`
   > span {
     font-weight: 600;
     font-size: 2rem;
-    line-height: 22px;
+    line-height: 2.2rem;
   }
 `;
 
@@ -51,7 +51,7 @@ export const NavLinksContainer = styled.li`
 
 export const NavListItem = styled.li`
   list-style: none;
-  margin-right: 20px;
+  margin-right: 2rem;
   cursor: pointer;
   color: #fff;
   text-transform: capitalize;

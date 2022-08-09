@@ -6,16 +6,16 @@ export const ListingCardContainer = styled.div<Pick<ListingCardProps, 'bgColor'>
   padding: 2rem;
   background-color: ${(props) => props.bgColor || '#f9f9f9'};
   border: 1px solid ${(props) => props.bgColor || '#f9f9f9'};
-  border-radius: 10px;
+  border-radius: 1rem;
   max-width: 38rem;
   box-sizing: border-box;
 `;
 
 export const ListingImageContainer = styled.div`
   width: 100%;
-  height: 250px;
+  height: 25rem;
   background-color: #f9f9f9;
-  border-radius: 10px;
+  border-radius: 1rem;
   overflow: hidden;
   position: relative;
   img {

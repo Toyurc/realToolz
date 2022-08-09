@@ -1,4 +1,4 @@
-import Button, { Colors } from 'components/Buttons/Button';
+import { Colors } from 'components/Buttons/Button';
 import { ReactComponent as LocationIcon } from 'assets/icons/location.svg';
 import { ReactComponent as HouseIcon } from 'assets/icons/building.svg';
 import { ReactComponent as TenantIcon } from 'assets/icons/people.svg';

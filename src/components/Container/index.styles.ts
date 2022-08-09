@@ -5,9 +5,9 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background: linear-gradient(
+  /* background: linear-gradient(
     240.67deg,
     rgba(24, 73, 198, 0.9) 50.54%,
     rgba(24, 73, 198, 0) 85.02%
-  );
+  ); */
 `;

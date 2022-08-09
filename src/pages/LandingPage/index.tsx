@@ -30,7 +30,7 @@ import {
 } from './index.styles';
 import Button, { Colors } from 'components/Buttons/Button';
 import SectionHeading from 'components/SectionHeading/SectionHeading';
-import { FeaturedStorageArray, Links } from 'constant';
+import { FeaturedStorageArray, Links } from 'utils/constant';
 import ListingCard from 'components/ListingCard/ListingCard';
 
 export type RouterLinkProps = {
@@ -250,7 +250,7 @@ const LandingPage = () => {
             </div>
             <div>
               <h4>let&apos;s get social</h4>
-              <select>
+              <select title="select language">
                 <option>english</option>
               </select>
             </div>
