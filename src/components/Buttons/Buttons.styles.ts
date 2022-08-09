@@ -6,7 +6,7 @@ export const BaseButton = styled.button<ButtonProps>`
   color: ${(props) => props.color};
   border: none;
   border-radius: 10px;
-  padding: ${(props) => props.padding || '2rem'};
+  padding: ${(props) => props.padding || '1.5rem 2rem'};
   font-size: 1.8rem;
   font-weight: 500;
   cursor: pointer;

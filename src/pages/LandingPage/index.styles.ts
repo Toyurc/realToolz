@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import BannerImage from '../../assets/images/landing-page-banner.png';
+import SellImage from '../../assets/images/sell-bg.png';
 import ActiveListingImage from '../../assets/images/active-listing.png';
+import ExploreSectionImage from '../../assets/images/explore-bg.png';
+import QueriesSectionImage from '../../assets/images/queries-bg.png';
+import Button from 'components/Buttons/Button';
 
 export const Banner = styled.section`
   background-image: url(${BannerImage});
@@ -92,7 +96,7 @@ export const ButtonContainer = styled.div`
 
 export const FeaturedStorage = styled.section`
   display: flex;
-  background-color: #f5f5f5;
+  background-color: #fff;
 `;
 
 export const ActiveListing = styled.section`
@@ -100,4 +104,77 @@ export const ActiveListing = styled.section`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 8rem;
+`;
+
+export const ActiveListingGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 3rem;
+`;
+
+export const ActiveListingButton = styled(Button)`
+  display: flex;
+  align-items: center;
+  margin: 1.5rem auto;
+  margin-top: 3rem;
+`;
+
+export const SellSection = styled.section`
+  background-image: url(${SellImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 8rem;
+  display: flex;
+`;
+
+export const SellSectionContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+`;
+
+export const SellSectionImage = styled.div`
+  width: 68rem;
+  height: 68rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const SelfStorage = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+`;
+
+export const ExploreSection = styled.section`
+  background-image: url(${ExploreSectionImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
+
+export const QueriesSection = styled.section`
+  background-image: url(${QueriesSectionImage});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+`;
+
+export const StorageFooterWrapper = styled.footer`
+  background-color: #fff;
+`;
+
+export const StorageFooter = styled.div`
+  display: grid;
+  grid-template-columns: max-content 1fr 1fr max-content;
 `;
