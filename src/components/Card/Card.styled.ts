@@ -12,9 +12,11 @@ export const StyledWrapper = styled.div`
   cursor: pointer;
   border-radius: 0.5rem;
   box-shadow: 0px 4px 20px rgba(109, 123, 138, 0.2);
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: #79d49c;
+    transform: translateY(-0.5rem);
   }
 `;
 

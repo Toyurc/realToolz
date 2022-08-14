@@ -1,3 +1,4 @@
+import { Colors } from './../../components/Buttons/Button';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import BannerImage from '../../assets/images/landing-page-banner.png';
@@ -23,7 +24,7 @@ export const NavLinks = styled.nav`
   height: 6rem;
 `;
 
-export const LogoContainer = styled(Link)`
+export const LogoContainer = styled(Link)<{ textColor?: Colors }>`
   display: flex;
   align-items: center;
   color: #fff;
@@ -33,6 +34,7 @@ export const LogoContainer = styled(Link)`
     font-weight: 600;
     font-size: 2rem;
     line-height: 2.2rem;
+    color: ${(props) => props.textColor || 'inherit'};
   }
 `;
 
@@ -176,5 +178,63 @@ export const StorageFooterWrapper = styled.footer`
 
 export const StorageFooter = styled.div`
   display: grid;
-  grid-template-columns: max-content 1fr 1fr max-content;
+  padding: 3rem 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  column-gap: 4rem;
+  font-family: 'Roboto';
+`;
+
+export const FooterInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+
+  > p,
+  > span {
+    color: #4a4a4a;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+`;
+
+export const QuickLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+
+  > h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2f2f2f;
+    text-transform: uppercase;
+  }
+
+  > ul {
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    > li {
+      list-style: none;
+      text-transform: capitalize;
+    }
+  }
+`;
+
+export const NewsLetter = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+
+  > h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2f2f2f;
+    text-transform: uppercase;
+  }
 `;

@@ -27,6 +27,9 @@ import {
   StorageFooter,
   StorageFooterWrapper,
   TextContainer,
+  FooterInfo,
+  QuickLinks,
+  NewsLetter,
 } from './index.styles';
 import Button, { Colors } from 'components/Buttons/Button';
 import SectionHeading from 'components/SectionHeading/SectionHeading';
@@ -221,18 +224,18 @@ const LandingPage = () => {
       <StorageFooterWrapper>
         <Wrapper>
           <StorageFooter>
-            <div>
-              <LogoContainer to={'/'}>
+            <FooterInfo>
+              <LogoContainer textColor={Colors.black} to={'/'}>
                 <BlueContainerLogo />
-                &nbsp;<span>StorageConnect</span>
+                <span>StorageConnect</span>
               </LogoContainer>
               <p>
                 Nam posuere accumsan porta. Integer id orci sed ante tincidunt tincidunt
                 sit amet sed libero.
               </p>
               <span>&copy; StorageConnect 2022, All Rights Reserved</span>
-            </div>
-            <div>
+            </FooterInfo>
+            <QuickLinks>
               <h4>quick links</h4>
               <ul>
                 <li>active listing</li>
@@ -240,14 +243,14 @@ const LandingPage = () => {
                 <li>free evaluation</li>
                 <li>learn</li>
               </ul>
-            </div>
-            <div>
+            </QuickLinks>
+            <NewsLetter>
               <h4>newsletter</h4>
               <input placeholder="Enter your email" />
               <Button color={Colors.white} background={Colors.blue}>
                 subscribe now
               </Button>
-            </div>
+            </NewsLetter>
             <div>
               <h4>let&apos;s get social</h4>
               <select title="select language">
