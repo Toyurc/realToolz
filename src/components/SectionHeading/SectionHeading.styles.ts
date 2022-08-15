@@ -13,7 +13,7 @@ export const SectionHeader = styled.header`
 export const SectionHeadingText = styled.h1<Pick<SectionHeadingProps, 'headerColor'>>`
   font-weight: 700;
   font-size: 3.5rem;
-  line-height: 3rem;
+  line-height: 5rem;
   color: ${(props) => props.headerColor || '#021850'};
   margin: 1rem 0;
 `;

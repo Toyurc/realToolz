@@ -1,3 +1,4 @@
+import { Wrapper } from './../../components/Wrapper/index.styles';
 import { Colors } from './../../components/Buttons/Button';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -24,7 +25,7 @@ export const NavLinks = styled.nav`
   height: 6rem;
 `;
 
-export const LogoContainer = styled(Link)<{ textColor?: Colors }>`
+export const LogoContainer = styled(Link)<{ textcolor?: Colors }>`
   display: flex;
   align-items: center;
   color: #fff;
@@ -34,7 +35,7 @@ export const LogoContainer = styled(Link)<{ textColor?: Colors }>`
     font-weight: 600;
     font-size: 2rem;
     line-height: 2.2rem;
-    color: ${(props) => props.textColor || 'inherit'};
+    color: ${(props) => props.textcolor || 'inherit'};
   }
 `;
 
@@ -130,8 +131,9 @@ export const SellSection = styled.section`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 8rem;
   display: flex;
+  border-bottom-right-radius: 30rem;
+  overflow: hidden;
 `;
 
 export const SellSectionContent = styled.div`
@@ -139,11 +141,27 @@ export const SellSectionContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-self: center;
+
+  > header {
+    text-align: left;
+  }
+
+  > button {
+    width: 24rem;
+    margin-top: 1.6rem;
+  }
+`;
+
+export const SellSectionWrapper = styled(Wrapper)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const SellSectionImage = styled.div`
   width: 68rem;
   height: 68rem;
+  margin-top: 2rem;
   img {
     width: 100%;
     height: 100%;
@@ -158,11 +176,37 @@ export const SelfStorage = styled.section`
   align-self: center;
 `;
 
+export const SelfStorageImage = styled.div`
+  width: 68rem;
+  height: 68rem;
+  margin-bottom: -8rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
 export const ExploreSection = styled.section`
   background-image: url(${ExploreSectionImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-top-left-radius: 30rem;
+  overflow: hidden;
+`;
+
+export const ExploreAndLearn = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+`;
+
+export const ExploreCardContainer = styled.div`
+  display: flex;
+  column-gap: 1.6rem;
 `;
 
 export const QueriesSection = styled.section`
@@ -170,6 +214,40 @@ export const QueriesSection = styled.section`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rem 8rem;
+`;
+
+export const QueryCard = styled.div`
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 30px 40px rgba(24, 73, 198, 0.1);
+  border-radius: 10px;
+  padding: 10rem 8rem;
+  column-gap: 2rem;
+  align-items: center;
+`;
+
+export const QueryContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+
+  > h2 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 3rem;
+    color: #021850;
+  }
+
+  > p {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: rgba(0, 1, 3, 0.7);
+  }
 `;
 
 export const StorageFooterWrapper = styled.footer`
@@ -237,4 +315,47 @@ export const NewsLetter = styled.div`
     color: #2f2f2f;
     text-transform: uppercase;
   }
+
+  > label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4a4a4a;
+  }
+
+  > input {
+    width: 25rem;
+    padding: 0.8rem;
+    border: 1px solid #e8efff;
+    border-radius: 5px;
+  }
+`;
+
+export const NewsButton = styled(Button)`
+  width: 20rem;
+`;
+
+export const Socials = styled.div`
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+
+  > h4 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2f2f2f;
+    text-transform: uppercase;
+  }
+
+  > select {
+    width: 21rem;
+    padding: 0.8rem;
+    border-radius: 3px;
+  }
+`;
+
+export const IconsContainer = styled.div`
+  display: flex;
+  column-gap: 0.8rem;
 `;

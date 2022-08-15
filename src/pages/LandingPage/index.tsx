@@ -2,6 +2,10 @@ import { Wrapper } from 'components/Wrapper/index.styles';
 import { Link } from 'react-router-dom';
 import { ReactComponent as ContainerLogo } from 'assets/icons/container.svg';
 import { ReactComponent as BlueContainerLogo } from 'assets/icons/container-blue.svg';
+import { ReactComponent as Facebook } from 'assets/icons/facebook.svg';
+import { ReactComponent as Twitter } from 'assets/icons/twitter.svg';
+import { ReactComponent as LinkedIn } from 'assets/icons/linkedin.svg';
+import { ReactComponent as Instagram } from 'assets/icons/instagram.svg';
 import ContainerImage from 'assets/images/containers.png';
 import LadyImage from 'assets/images/lady-image.png';
 import {
@@ -30,11 +34,21 @@ import {
   FooterInfo,
   QuickLinks,
   NewsLetter,
+  Socials,
+  IconsContainer,
+  NewsButton,
+  QueryCard,
+  QueryContent,
+  ExploreAndLearn,
+  ExploreCardContainer,
+  SellSectionWrapper,
+  SelfStorageImage,
 } from './index.styles';
 import Button, { Colors } from 'components/Buttons/Button';
 import SectionHeading from 'components/SectionHeading/SectionHeading';
-import { FeaturedStorageArray, Links } from 'utils/constant';
+import { FeaturedStorageArray, LearningStorageArray, Links } from 'utils/constant';
 import ListingCard from 'components/ListingCard/ListingCard';
+import LearningCard from 'components/ListingCard/LearningCards';
 
 export type RouterLinkProps = {
   id: number;
@@ -159,7 +173,7 @@ const LandingPage = () => {
         </Wrapper>
       </ActiveListing>
       <SellSection>
-        <Wrapper>
+        <SellSectionWrapper>
           <SellSectionContent>
             <SectionHeading
               header={'Do you have a Self Storage for Sale?'}
@@ -174,14 +188,14 @@ const LandingPage = () => {
           <SellSectionImage>
             <img src={ContainerImage} alt="human with container" />
           </SellSectionImage>
-        </Wrapper>
+        </SellSectionWrapper>
       </SellSection>
       <SelfStorage>
-        <Wrapper>
-          <SellSectionImage>
-            <img src={LadyImage} alt="human with container" />
-          </SellSectionImage>
-          <div>
+        <SellSectionWrapper>
+          <SelfStorageImage>
+            <img src={LadyImage} alt="lady on suit" />
+          </SelfStorageImage>
+          <SellSectionContent>
             <SectionHeading
               header={'Do you want to buy a Self Storage?'}
               description={
@@ -191,41 +205,57 @@ const LandingPage = () => {
             <Button color={Colors.white} background={Colors.blue}>
               sell your self storage
             </Button>
-          </div>
-        </Wrapper>
+          </SellSectionContent>
+        </SellSectionWrapper>
       </SelfStorage>
       <ExploreSection>
         <Wrapper>
-          <SectionHeading
-            header={
-              'Learn Everything About Buying, Selling, and Operating a Self Storage'
-            }
-            description={
-              'Learn about literally anything to know about Selling or Buying a Self Storage'
-            }
-            headerColor={Colors.white}
-            descriptionColor={Colors.white}
-          />
-          <Button color={Colors.black} background={Colors.yellow}>
-            Explore the Learning Section
-          </Button>
+          <ExploreAndLearn>
+            <SectionHeading
+              header={
+                'Learn Everything About Buying, Selling, and Operating a Self Storage'
+              }
+              description={
+                'Learn about literally anything to know about Selling or Buying a Self Storage'
+              }
+              headerColor={Colors.white}
+              descriptionColor={Colors.white}
+            />
+            <ExploreCardContainer>
+              {LearningStorageArray.map((storage) => (
+                <LearningCard
+                  key={storage.id}
+                  headerText={storage.headerText}
+                  imageUrl={storage.imageUrl}
+                  timeLapsed={storage.timeLapsed}
+                  user={storage.user}
+                  tagType={storage.tagType}
+                />
+              ))}
+            </ExploreCardContainer>
+            <Button color={Colors.black} background={Colors.yellow}>
+              Explore the Learning Section
+            </Button>
+          </ExploreAndLearn>
         </Wrapper>
       </ExploreSection>
       <QueriesSection>
-        <div>
-          <SectionHeading
-            header={'Any Queries? Reach Out to Us'}
-            description={'Feel free to write to us, we are happy to help you'}
-            headerColor={Colors.blue}
-            descriptionColor={Colors.black}
-          />
-        </div>
+        <QueryCard>
+          <QueryContent>
+            <h2>Any Queries? Reach Out to Us</h2>
+            <p>Feel free to write to us, we are happy to help you</p>
+          </QueryContent>
+          {/* TODO: Add icons to buttons */}
+          <Button color={Colors.white} background={Colors.blue}>
+            Write to us
+          </Button>
+        </QueryCard>
       </QueriesSection>
       <StorageFooterWrapper>
         <Wrapper>
           <StorageFooter>
             <FooterInfo>
-              <LogoContainer textColor={Colors.black} to={'/'}>
+              <LogoContainer textcolor={Colors.black} to={'/'}>
                 <BlueContainerLogo />
                 <span>StorageConnect</span>
               </LogoContainer>
@@ -247,16 +277,23 @@ const LandingPage = () => {
             <NewsLetter>
               <h4>newsletter</h4>
               <input placeholder="Enter your email" />
-              <Button color={Colors.white} background={Colors.blue}>
+              <NewsButton color={Colors.white} background={Colors.blue}>
                 subscribe now
-              </Button>
+              </NewsButton>
             </NewsLetter>
-            <div>
+            <Socials>
               <h4>let&apos;s get social</h4>
+              <IconsContainer>
+                <Facebook />
+                <LinkedIn />
+                <Twitter />
+                <Instagram />
+              </IconsContainer>
+              {/* TODO: create custom select to hold image and icon */}
               <select title="select language">
                 <option>english</option>
               </select>
-            </div>
+            </Socials>
           </StorageFooter>
         </Wrapper>
       </StorageFooterWrapper>

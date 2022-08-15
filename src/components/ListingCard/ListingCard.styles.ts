@@ -35,7 +35,7 @@ export const ListingCardContent = styled.div`
     text-align: center;
     font-weight: 600;
     font-size: 2.4rem;
-    line-height: 2rem;
+    line-height: 3rem;
     color: #2f2f2f;
     margin: 2rem 0;
   }
@@ -75,4 +75,13 @@ export const ListingCardButton = styled(Button)`
   margin: 0 auto;
   margin-top: 1rem;
   padding: 1.2rem 3rem;
+`;
+
+export const LearnCardContainer = styled(ListingCardContainer)`
+  padding: 0.4rem;
+  padding-bottom: 1rem;
+`;
+
+export const LearningDetailsItemWrapper = styled(ListingDetailsItemWrapper)`
+  flex-direction: row;
 `;

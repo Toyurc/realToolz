@@ -1,6 +1,11 @@
+import { LearningCardProps } from './../components/ListingCard/LearningCards';
 import { ListingCardProps } from 'components/ListingCard/ListingCard';
 import { FaBriefcase, FaMoneyBillWave } from 'react-icons/fa';
 import { RouterLinkProps } from 'pages/LandingPage';
+import Learning1 from 'assets/images/learning1.png';
+import Learning2 from 'assets/images/learning2.png';
+import Learning3 from 'assets/images/learning3.png';
+import Learning4 from 'assets/images/learning4.png';
 import Storage1 from 'assets/images/storage1.png';
 import Storage2 from 'assets/images/storage2.png';
 import Storage3 from 'assets/images/storage3.png';
@@ -56,6 +61,41 @@ export const FeaturedStorageArray: ListingCardProps[] = [
     totalUnits: 89,
     location: 'Jersey City, NJ',
     landMass: '40,233',
+  },
+];
+
+export const LearningStorageArray: LearningCardProps[] = [
+  {
+    id: 1,
+    imageUrl: Learning1,
+    headerText: 'Everything you need to know about how to buy a Self Storage',
+    timeLapsed: '5hrs ago',
+    user: 'Raza',
+    tagType: 'Buy',
+  },
+  {
+    id: 2,
+    imageUrl: Learning2,
+    headerText: 'Learn Everything about managing and operating a Self Storage',
+    timeLapsed: '2days ago',
+    user: 'Raza',
+    tagType: 'operate',
+  },
+  {
+    id: 3,
+    imageUrl: Learning3,
+    headerText: 'Everything you need to know about selling a Self Storage',
+    timeLapsed: '3days ago',
+    user: 'Raza',
+    tagType: 'sell',
+  },
+  {
+    id: 4,
+    imageUrl: Learning4,
+    headerText: 'Everything you need to know about how to buy a Self Storage',
+    timeLapsed: '5days ago',
+    user: 'Raza',
+    tagType: 'Buy',
   },
 ];
 
